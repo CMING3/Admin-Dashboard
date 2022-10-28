@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+:root{
+    --main-theme:#0ea5e9;
+    --nd-theme:#dbeafe;
+}
+
+.dashboard{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.header{
+    background-color: white;
+    box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
+    border-radius: 4px;
+    z-index: +1;
+    grid-area: 1/2/2/6;
+}
+
+.upper-head{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.search-bar{
+    flex:60%;
+    padding: 4px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar>input{
+    width:70%;
+    height:24px;
+    margin-left: 5px;
+    border:none;
+    border-radius: 8px;
+    background-color: var(--nd-theme);
+}
+
+.profile{
+    flex:40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-icon{
+    flex-shrink: 0;
+    background-image: url(./images/icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.username{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.lower-head{
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+
+.left-lower-head{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.left-lower-head>.profile-icon{
+    width: 4rem;
+    height: 4rem;
+}
+
+.sidebar{
+    background-color: var(--main-theme);
+    grid-area: 1/1/6/2;
+}
+
+.dash-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+}
+
+.dash-logo>span{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.article{
+    background-color: var(--nd-theme);
+    grid-area: 2/2/6/6;
+}
+
+.action-btns{
+    display: flex;
+    margin-right: 40px;
+    gap:20px;
+}
+
+.action-btns>button{
+    background-color: var(--main-theme);
+    color: white;
+    padding:10px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    width:6em;
+}
